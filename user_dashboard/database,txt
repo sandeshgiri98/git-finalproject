@@ -1,0 +1,38 @@
+Create table complain(
+    id int primary key not null auto_increment,
+    category varchar(50),
+    type varchar(50),
+    department varchar(50),
+    nature varchar(50),
+    image varchar(50),
+    complain_description varchar(500),
+    complaint_datetime datetime DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE complain (
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    user_id VARCHAR(8),
+    name VARCHAR(255),
+    category VARCHAR(50),
+    type VARCHAR(50),
+    department VARCHAR(50),
+    nature VARCHAR(50),
+    image VARCHAR(50),
+    complaint_description VARCHAR(500),
+    complaint_datetime DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES register(user_id),
+);
+CREATE TABLE complain (
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    user_id INT,
+    category VARCHAR(50),
+    type VARCHAR(50),
+    department VARCHAR(50),
+    nature VARCHAR(50),
+    image VARCHAR(50),
+    complain_description VARCHAR(500),
+    complaint_datetime DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES register(id),
+    FOREIGN KEY (user_id) REFERENCES register(id),
+    FOREIGN KEY (user_id) REFERENCES register(id)
+);
